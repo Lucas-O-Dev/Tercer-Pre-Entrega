@@ -1,18 +1,18 @@
 footer{
-    background-color: $secondcolor;
+    background-color: none;
     width:100%;
     padding: 1em 0;
     text-align: center;
     margin-top: auto;
     font-size: 10px;
     align-self:flex-end;
-    color: black;
+    color: $fontcolor;
     a{
         text-decoration: none;
-        color: black;
+        color: $fontcolor;
     }
 }
 
 .footer-content-container a:hover{
-    color: white;
+    color: grey;
 }

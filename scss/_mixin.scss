@@ -19,8 +19,8 @@
 }
 
 @mixin img(){
-    width: 40%;
-    height: 86%;
+    width: 30%;
+    height: 82%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -29,11 +29,21 @@
 }
 
 @mixin jpg(){
-    width: 80%;
+    width: 86%;
     height: 86%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 6px;
+}
+
+@mixin try(){
+    margin: 0 100px;
+}
+
+@mixin mobilecosmetica{
+    @media screen and (max-width:486px){
+        @content;
+    }
 }

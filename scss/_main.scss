@@ -1,12 +1,12 @@
 main{
     width: 100%;
     min-height: 100vh;
-    background-color: $firstcolor;
+    background-color: none;
     @include reset;
     .grid-container{
         display: grid;
         gap: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(216px, 1.4fr));
         .caja{
             background-color: white;
             border-radius: 8px;
@@ -32,5 +32,12 @@ main{
                 @include jpg;
             }
             }
+        }
+    }
+
+    .try{
+        @include try;
+        @include mobilecosmetica{
+            margin: 0 20px;
         }
     }
