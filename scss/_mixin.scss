@@ -1,0 +1,39 @@
+@mixin reset(){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin caja(){
+    background-color: white;
+    border-radius: 8px;
+    border: 4px solid red;
+    color: black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px;
+}
+
+@mixin img(){
+    width: 40%;
+    height: 86%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+@mixin jpg(){
+    width: 80%;
+    height: 86%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}

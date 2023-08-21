@@ -1,0 +1,36 @@
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $firstcolor;
+    @include reset;
+    .grid-container{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        .caja{
+            background-color: white;
+            border-radius: 8px;
+            color: black;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            margin: 10px;
+            img{
+                @include img;
+            }
+            h3{
+                margin: 0;
+            }
+            p{
+                margin-bottom: 4px;
+                margin-top: 0;
+            }
+            .jpg{
+                @include jpg;
+            }
+            }
+        }
+    }
