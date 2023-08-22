@@ -84,7 +84,7 @@ main .grid-container .caja {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 16px;
   margin: 10px;
 }
 main .grid-container .caja img {
@@ -113,11 +113,129 @@ main .grid-container .caja .jpg {
   margin-top: 6px;
 }
 
-.try {
-  margin: 0 100px;
+.goal {
+  width: 100%;
+  min-height: 100vh;
+  background-color: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: center;
 }
-@media screen and (max-width: 486px) {
-  .try {
-    margin: 0 20px;
+.goal .eyes {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(216px, 0.8fr));
+  margin: 0 80px;
+  justify-content: center;
+  align-items: center;
+}
+.goal .eyes .box {
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin: 10px;
+}
+.goal .eyes .box img {
+  width: 30%;
+  height: 82%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+.goal .eyes .box h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.goal .eyes .box a {
+  margin: 6px;
+}
+.goal .eyes .box .jpg {
+  width: 86%;
+  height: 86%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.soda {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: white;
+  justify-content: center;
+  padding: 26px 20px;
+}
+@media screen and (max-width: 768px) {
+  .soda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+}
+.soda .yerba {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 120px;
+}
+@media screen and (max-width: 768px) {
+  .soda .yerba {
+    width: 100%;
+    padding: 0;
+  }
+}
+.soda .azucar {
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .soda .azucar {
+    width: 100%;
+  }
+}
+.soda .azucar .carousel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+.soda .azucar .carousel img {
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.soda .azucar .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 2px;
+}
+.soda .azucar .casa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

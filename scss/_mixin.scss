@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: $fontsize;
     margin: 10px;
 }
 
@@ -38,12 +38,8 @@
     margin-top: 6px;
 }
 
-@mixin try(){
-    margin: 0 100px;
-}
-
 @mixin mobilecosmetica{
-    @media screen and (max-width:486px){
+    @media screen and (max-width:768px){
         @content;
     }
 }
