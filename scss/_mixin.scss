@@ -43,3 +43,9 @@
         @content;
     }
 }
+
+@mixin tablethistoria{
+    @media screen and (max-width:768px){
+        @content;
+    }
+}

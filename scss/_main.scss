@@ -143,4 +143,97 @@ main{
         }
 
 
+.ysy{
+    display: flex;
+    flex-direction: column;
+    .trapo{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        margin: 0;
+        @include reset;
+        color: $fontcolor;
+        @include tablethistoria{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .cup{
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            height: 400px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            @include tablethistoria{
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items: center;
+                margin: 0;
+                height: 50%;
+            }
+            .dillom{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                h2{
+                    margin: 0;
+                }
+                @include tablethistoria{
+                    width: 90%;
+                    height: 60%;
+                }
+            }
+            img{
+                width: 50%;
+                border-radius: 8px;
+                @include tablethistoria{
+                    width: 90%;
+                    height: 100%;
+                }
+            }
+        }
+        .stone{
+            width: 90%;
+            height: 400px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            @include tablethistoria{
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                height: 50%;
+            }
+            img{
+                width: 50%;
+                border-radius: 8px;
+                @include tablethistoria{
+                    width: 90%;
+                }
+            }
+            .rels{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+                @include tablethistoria{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+
+
 

@@ -238,4 +238,111 @@ main .grid-container .caja .jpg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.ysy {
+  display: flex;
+  flex-direction: column;
+}
+.ysy .trapo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .ysy .trapo {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.ysy .trapo .cup {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 400px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .ysy .trapo .cup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 50%;
+  }
+}
+.ysy .trapo .cup .dillom {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.ysy .trapo .cup .dillom h2 {
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .ysy .trapo .cup .dillom {
+    width: 90%;
+    height: 60%;
+  }
+}
+.ysy .trapo .cup img {
+  width: 50%;
+  border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .ysy .trapo .cup img {
+    width: 90%;
+    height: 100%;
+  }
+}
+.ysy .trapo .stone {
+  width: 90%;
+  height: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .ysy .trapo .stone {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+  }
+}
+.ysy .trapo .stone img {
+  width: 50%;
+  border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .ysy .trapo .stone img {
+    width: 90%;
+  }
+}
+.ysy .trapo .stone .rels {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .ysy .trapo .stone .rels {
+    width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */
