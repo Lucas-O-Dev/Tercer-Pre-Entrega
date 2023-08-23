@@ -1,6 +1,7 @@
 body{
     @include reset;
-    background-image: url(../assets/img/fondooooo.png);
-    background-size:contain;
+    background: url(../assets/img/fondooooo.png) no-repeat center center fixed;
+    background-size:cover;
+    color: $fontcolor;
 }
 
