@@ -3,6 +3,37 @@ main{
     min-height: 100vh;
     background-color: none;
     @include reset;
+    .scuby{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        p{
+            margin: 20px;
+        }
+        .shaggy{
+            display: flex;
+            @include mota;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            @include mobile{
+                width: 90%;
+                padding: 0;
+                justify-content: flex-start;
+            }
+            .sid{
+                margin: 10px;
+                width: 80px;
+                height: 50px;
+            }
+        }
+        img{
+            width: 3.125rem;
+            height: 3.125rem;
+        }
+    }
     .grid-container{
         display: grid;
         gap: 10px;
@@ -54,15 +85,20 @@ main{
                     @include mota;
                     display: flex;
                     flex-direction: row;
-                    width: 40%;
+                    width: auto;
                     justify-content: space-between;
                     margin-bottom: 20px;
+
                 }
                 .cobrar{
                     width: 5rem;
                     height: 3.75rem;
                     border-radius: 8px;
                     margin: 6px;
+                    @include tablethistoria{
+                        width: 4.375rem;
+                        height: 2.625rem;
+                    }
                 }
             }
         }
@@ -112,7 +148,7 @@ main{
             color: $fontcolor;
             justify-content: center;
             padding: 26px 20px;
-            @include mobilecosmetica{
+            @include tablethistoria{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -125,9 +161,29 @@ main{
                 justify-content:flex-start;
                 align-items: center;
                 padding-top: 120px;
-                @include mobilecosmetica{
+                @include mobile{
                     width: 100%;
                     padding: 0;
+                }
+                @include tablethistoria{
+                    padding-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+                    justify-content: center;
+                    align-items: center;
+                    h2{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    p{
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
             }
             .azucar{
@@ -136,7 +192,7 @@ main{
                 width: 70%;
                 display: flex;
                 flex-direction: column;
-                @include mobilecosmetica{
+                @include mobile{
                     width: 100%;
                 }
                 .carousel{
@@ -288,9 +344,10 @@ main{
                 justify-content: center;
                 align-items: center;
                 color: $fontcolor;
-            
+                @include mota;
                 display: flex;
                 flex-direction: column;
+                padding: 8px;
                 input{
                     background: $back; 
                     width: 408px; 
@@ -298,7 +355,7 @@ main{
                     border-radius: 5px;  
                     border-style: solid; 
                     border-width: 1px; 
-                    border-color: #ab4493; 
+                    border-color: $bordercolor; 
                     margin-top: 10px;  
                     padding-left: 10px;
                     margin-bottom: 20px; 
@@ -310,7 +367,7 @@ main{
                         border-radius: 5px;  
                         border-style: solid; 
                         border-width: 1px; 
-                        border-color: #ab4493; 
+                        border-color: $bordercolor; 
                         margin-top: 10px;  
                         padding-left: 10px;
                         margin-bottom: 20px; 
@@ -328,7 +385,7 @@ main{
                             margin-top: 10px; 	
                             text-transform: uppercase;
                             background: $back;
-                            border-color: #ab4493; 
+                            border-color: $bordercolor; 
                             border-style: solid; 
                             border-radius: 10px;	
                             width: 420px;   

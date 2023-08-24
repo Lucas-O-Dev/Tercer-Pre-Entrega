@@ -38,8 +38,8 @@
     margin-top: 6px;
 }
 
-@mixin mobilecosmetica{
-    @media screen and (max-width:768px){
+@mixin mobile{
+    @media screen and (max-width:330px){
         @content;
     }
 }
