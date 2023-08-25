@@ -334,6 +334,17 @@ main{
     justify-content: center;
     align-items: center;
     .hell{
+        .taza{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .taza img{
+            display: flex;
+            width: 3.125rem;
+            height: 3.125rem;
+        }
         .ring{
         
             display: flex;
@@ -456,35 +467,13 @@ main{
             flex-direction: row;
             justify-content: center;
             .sleep{
-                display: flex;
-                flex-direction: row;
+                @extend .contenido;
                 width: 30px;
                 height: 30px;
                 margin: 6px;
             }
         }
     }
-    // .realidad{
-    //     @include mota;
-    //     width: 30%;
-    //     height: auto;
-    //     justify-content: center;
-    //     align-items: center;
-    //     .contact-form{
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: center;
-    //         align-items: center;
-    //         input{
-    //             background: rgba(249, 249, 249, 0.3);
-    //             border-radius: 4px;
-    //         }
-    //         h2{
-    //             justify-content: center;
-    //             align-items: center;
-    //         }
-    //     }
-    // }
 }
 
 
