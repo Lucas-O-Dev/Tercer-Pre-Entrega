@@ -1,5 +1,6 @@
 footer{
-    background-color: none;
+    @include mota;
+    border-radius: 0;
     width:100%;
     padding: 1em 0;
     text-align: center;

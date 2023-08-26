@@ -120,6 +120,120 @@ main{
                 align-items: center;
                 font-size: $fontsize;
                 margin: 10px;
+                    .button {
+                        --width: 100px;
+                        --height: 35px;
+                        --tooltip-height: 35px;
+                        --tooltip-width: 90px;
+                        --gap-between-tooltip-to-button: 18px;
+                        --button-color: #222;
+                        --tooltip-color: #fff;
+                        width: var(--width);
+                        height: var(--height);
+                        background: var(--button-color);
+                        position: relative;
+                        text-align: center;
+                        border-radius: 0.45em;
+                        font-family: "Arial";
+                        transition: background 0.3s;
+                        margin: 4px;
+                    }
+                    
+                    .button::before {
+                        position: absolute;
+                        content: attr(data-tooltip);
+                        width: var(--tooltip-width);
+                        height: var(--tooltip-height);
+                        background-color: #555;
+                        font-size: 0.9rem;
+                        color: #fff;
+                        border-radius: .25em;
+                        line-height: var(--tooltip-height);
+                        bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+                        left: calc(50% - var(--tooltip-width) / 2);
+                    }
+                    
+                    .button::after {
+                        position: absolute;
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border: 10px solid transparent;
+                        border-top-color: #555;
+                        left: calc(50% - 10px);
+                        bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+                    }
+                    
+                    .button::after,.button::before {
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.5s;
+                    }
+                    
+                    .text {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    .button-wrapper,.text,.icon {
+                        overflow: hidden;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        color: #fff;
+                    }
+                    
+                    .text {
+                        top: 0
+                    }
+                    
+                    .text,.icon {
+                        transition: top 0.5s;
+                    }
+                    
+                    .icon {
+                        color: #fff;
+                        top: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    .icon svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                    
+                    .button:hover {
+                        background: #222;
+                    }
+                    
+                    .button:hover .text {
+                        top: -100%;
+                    }
+                    
+                    .button:hover .icon {
+                        top: 0;
+                    }
+                    
+                    .button:hover:before,.button:hover:after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    
+                    .button:hover:after {
+                        bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+                    }
+                    
+                    .button:hover:before {
+                        bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+                    }
+                    
+                    
+                    
+                    
                 .equis{
                     width: 90%
                 }
@@ -129,9 +243,6 @@ main{
                 h3{
                     margin: 0;
                     font-size: $fontsize;
-                }
-                a{
-                    margin: 6px
                 }
                 .jpg{
                     @include jpg;
@@ -143,11 +254,12 @@ main{
         .soda{
             font-size: $fontsize;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             width: 100%;
             color: $fontcolor;
-            justify-content: center;
-            padding: 26px 20px;
+            justify-content: flex-start;
+            padding-top: 0.5rem;
+            align-items: center;
             @include tablethistoria{
                 display: flex;
                 flex-direction: column;
@@ -155,12 +267,12 @@ main{
                 align-items: center;
             }
             .yerba{
-                width: 50%;
+                width: 90%;
+                @include reset;
                 display: flex;
                 flex-direction: column;
-                justify-content:flex-start;
+                justify-content: center;
                 align-items: center;
-                padding-top: 120px;
                 @include mobile{
                     width: 100%;
                     padding: 0;
@@ -187,7 +299,7 @@ main{
                 }
             }
             .azucar{
-                justify-content:space-between;
+                justify-content:flex-start;
                 align-items: center;
                 width: 70%;
                 display: flex;
@@ -196,11 +308,13 @@ main{
                     width: 100%;
                 }
                 .carousel{
-                    width: 100%;
+                    
+                    width: 60%;
                     display: flex; 
-                    justify-content:space-between;
+                    justify-content:center;
                     align-items: center;
-                    height: auto;
+                    height: 80%;
+                    margin-top: 0.75rem;
                     img{
                         border-radius: 8px;
                         width: 100%;
@@ -210,6 +324,7 @@ main{
                     }
                 }
                 .right{
+                
                     display: flex;
                     flex-direction: column;
                     justify-content:flex-end;
@@ -218,6 +333,23 @@ main{
                     margin-bottom: 2px;
                 }
                 .casa{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .nata{
+                margin-top: 0.5rem;
+                padding: 6px;
+                width: 90%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .right{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -249,7 +381,7 @@ main{
             flex-direction: row;
             width: 98%;
             height: 400px;
-            margin-top: 40px;
+            margin-top: 0.75rem;
             margin-bottom: 10px;
             @include tablethistoria{
                 display: flex;
@@ -264,21 +396,23 @@ main{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content:flex-start;
+                justify-content:center;
                 margin-right: 10px;
                 padding:0 30px;
+                height: 92%;
                 @include mota;
                 h2{
                     margin: 0;
                 }
                 @include tablethistoria{
-                    width: 90%;
+                    width: 86%;
                     padding: 10px 10px;
                     margin-bottom: 20px;
                     margin-right: 0;
                 }
             }
             img{
+                height: 92%;
                 width: 50%;
                 border-radius: 8px;
                 @include tablethistoria{
@@ -290,24 +424,27 @@ main{
         .stone{
             width: 98%;
             height: 400px;
-            margin-top: 10px;
-            margin-bottom: 10px;
             display: flex;
             @include tablethistoria{
+                margin-top: 20px;
                 display: flex;
                 flex-direction: column-reverse;
                 justify-content: center;
                 align-items: center;
                 height: 50%;
+                width: 90%;
             }
             img{
                 width: 50%;
+                height: 92%;
                 border-radius: 8px;
                 @include tablethistoria{
                     width: 90%;
+                    margin-bottom: 20px;
                 }
             }
             .rels{
+                height: 90%;
                 width: 50%;
                 display: flex;
                 flex-direction: column;
@@ -328,14 +465,13 @@ main{
 }
 
 .zeballos{
+    min-width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
     .hell{
         .taza{
             display: flex;
+            margin-left: 0.5rem;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -358,48 +494,51 @@ main{
                 @include mota;
                 display: flex;
                 flex-direction: column;
-                padding: 8px;
+                margin-bottom: 0.5rem;
+                @include mobile{
+                    background: none;
+                }
                 input{
                     background: $back; 
-                    width: 408px; 
-                    height: 40px; 
-                    border-radius: 5px;  
+                    width: $ancho; 
+                    height: 2.5rem; 
+                    border-radius: 0.3125rem;  
                     border-style: solid; 
-                    border-width: 1px; 
+                    border-width: 0.0625rem; 
                     border-color: $bordercolor; 
-                    margin-top: 10px;  
-                    padding-left: 10px;
-                    margin-bottom: 20px; 
+                    margin-top: 0.625rem;  
+                    padding-left: 0.625rem;
+                    margin-bottom: 1.25rem; 
                 }
                 textarea{
                         background: rgba(250, 250, 250, 0.2);
-                        width: 405px; 
-                        height: 150px; 
-                        border-radius: 5px;  
+                        width: $ancho; 
+                        height: 9.375rem; 
+                        border-radius: 0.3125rem;  
                         border-style: solid; 
-                        border-width: 1px; 
+                        border-width: 0.0625rem; 
                         border-color: $bordercolor; 
-                        margin-top: 10px;  
-                        padding-left: 10px;
-                        margin-bottom: 20px; 
-                        padding-top: 15px; 
+                        margin-top: 0.625rem;  
+                        padding-left: 0.625rem;
+                        margin-bottom: 1.25rem; 
+                        padding-top: 0.9375rem; 
                     }
                     label{
                         display: block; 
                             float: center; 	
                         }
                         button{
-                            height: 45px; 
-                            padding-left: 5px;
-                            padding-right: 5px; 	
-                            margin-bottom: 20px; 
-                            margin-top: 10px; 	
+                            height: 2.8125rem; 
+                            padding-left: 0.3125rem;
+                            padding-right: 0.3125rem; 	
+                            margin-bottom: 1.25rem; 
+                            margin-top: 0.625rem; 	
                             text-transform: uppercase;
                             background: $back;
                             border-color: $bordercolor; 
                             border-style: solid; 
-                            border-radius: 10px;	
-                            width: 420px;   
+                            border-radius: 0.625rem;	
+                            width: $ancho;   
                             cursor: pointer;
                         }
                         button p{
@@ -409,23 +548,26 @@ main{
                             color: #ab4493; 
                         }
                         .aviso{
-                            font-size: 13px;  
+                            font-size: 0.8125rem;  
                             color: #0e0e0e;  
                         }
                         
                     h1{
-                        font-size: 39px;  
-                        text-align: letf; 
-                        padding-bottom: 20px; 
+                        font-size: 2.4375rem;  
+                        text-align: left; 
+                        padding-bottom: 1.25rem; 
                         color: $fontcolor;
                     }
                     h3{
-                        font-size: 14px; 
-                        padding-bottom: 30px;
+                        font-size: 0.875rem; 
+                        padding-bottom: 1.875rem;
+                        display: flex;
+                        margin-left: 0.625rem;
+                        align-items: center;
                         color: $fontcolor;   
                     }
                     p{
-                        font-size: 14px; 
+                        font-size: 0.875rem; 
                         color: $fontcolor; 
                     }
                     ::-webkit-input-placeholder {
@@ -438,11 +580,11 @@ main{
                         }
                         .formulario input:focus{
                             outline:0;
-                            border: 1px solid #97d848;
+                            border: 0.0625rem solid #97d848;
                         }
                         .formulario textarea:focus{
                             outline:0;
-                            border: 1px solid #97d848;
+                            border: 0.0625rem solid #97d848;
                         }
             }
         }
@@ -450,10 +592,11 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 10px;
+            margin: 0.625rem;
         }
         .walk{
             width: 90%;
+            margin-bottom: 3.75rem;
             ul{
                 display: flex;
                 flex-direction: column;
@@ -468,9 +611,9 @@ main{
             justify-content: center;
             .sleep{
                 @extend .contenido;
-                width: 30px;
-                height: 30px;
-                margin: 6px;
+                width: 1.875rem;
+                height: 1.875rem;
+                margin: 0.375rem;
             }
         }
     }

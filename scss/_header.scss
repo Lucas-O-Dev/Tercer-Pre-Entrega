@@ -1,6 +1,8 @@
 header{
     @include reset;
-    background-color: none;
+    @include mota;
+    padding: 2px;
+    border-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +18,7 @@ header{
             align-items: center;
             h1{
                 font-size: 24px;
-                margin-top: 22px;
+                margin-top: 18px;
                 color: $fontcolor;
             }
             img{
