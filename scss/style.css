@@ -135,6 +135,22 @@ main .grid-container .caja {
   font-size: 16px;
   margin: 10px;
 }
+main .grid-container .caja button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+main .grid-container .caja button a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 main .grid-container .caja img {
   width: 30%;
   height: 82%;
@@ -143,6 +159,7 @@ main .grid-container .caja img {
   justify-content: center;
   align-items: center;
   margin-top: 6px;
+  border-radius: 12px;
 }
 main .grid-container .caja h3 {
   margin: 0;

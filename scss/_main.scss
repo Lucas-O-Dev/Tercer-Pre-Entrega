@@ -49,8 +49,26 @@ main{
             align-items: center;
             font-size: $fontsize;
             margin: 10px;
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                a{
+                    height: 100%;
+                width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none
+                }
+            }
             img{
                 @include img;
+                border-radius: 12px;
+                
             }
             h3{
                 margin: 0;
