@@ -19,7 +19,7 @@
 }
 
 @mixin img(){
-    width: 30%;
+    width: 10%;
     height: 82%;
     overflow: hidden;
     display: flex;
@@ -50,8 +50,32 @@
     }
 }
 
+//mixin blur 
+
 @mixin mota{
     background: rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     backdrop-filter: blur(1px);
 }
+
+/* Para dispositivos móviles y tabletas pequeñas con grid */
+@mixin mediagridmobile {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin mediagridtablet{
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+//mixin mediaboxoferta
+
+@mixin mediaboxoferta {
+    @media screen and (max-width: 456px) {
+        @content;
+    }
+}
+

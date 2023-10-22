@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Para dispositivos móviles y tabletas pequeñas con grid */
 header {
   margin: 0;
   padding: 0;
@@ -198,7 +200,7 @@ main .grid-container .caja button a {
   text-decoration: none;
 }
 main .grid-container .caja img {
-  width: 30%;
+  width: 10%;
   height: 82%;
   overflow: hidden;
   display: flex;
@@ -232,6 +234,19 @@ main .grid-container .caja .jpg {
   padding: 0;
   box-sizing: border-box;
   justify-content: center;
+  align-items: center;
+}
+.goal .ceniza {
+  margin-top: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .goal .ceniza {
+    width: 80%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
 }
 .goal .ceniza .future {
   display: flex;
@@ -240,7 +255,15 @@ main .grid-container .caja .jpg {
   justify-content: space-between;
   align-items: center;
   color: white;
-  margin: 30px 10px 20px 10px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .goal .ceniza .future {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
 }
 .goal .ceniza .future .cheap {
   background: rgba(255, 255, 255, 0.2);
@@ -269,23 +292,48 @@ main .grid-container .caja .jpg {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(216px, 0.8fr));
-  margin: 0 80px;
-  justify-content: center;
+  margin: 0;
+  width: 40rem;
+  justify-items: center;
   align-items: center;
+}
+@media screen and (max-width: 320px) {
+  .goal .eyes {
+    grid-template-columns: 1fr; /* Cambia el diseño a una sola columna */
+    width: auto; /* Ajusta el ancho automáticamente */
+  }
+}
+@media screen and (max-width: 768px) {
+  .goal .eyes {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el tamaño de las columnas */
+    width: 100%; /* Ajusta el ancho al 100% */
+  }
 }
 .goal .eyes .box {
   background-color: white;
   border-radius: 8px;
   color: black;
-  height: 300px;
+  height: 12.5rem;
+  width: 12.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
   margin: 10px;
+  padding: 0.25rem;
+}
+@media screen and (max-width: 768px) {
+  .goal .eyes .box {
+    width: 10rem; /* Restablece el ancho de las cajas para tabletas y pantallas más grandes */
+  }
+}
+@media screen and (max-width: 320px) {
+  .goal .eyes .box {
+    width: 60%; /* Ajusta el ancho de las cajas */
+  }
 }
 .goal .eyes .box .button {
+  font-size: 16px;
   --width: 100px;
   --height: 35px;
   --tooltip-height: 35px;
@@ -381,10 +429,10 @@ main .grid-container .caja .jpg {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
 .goal .eyes .box .equis {
-  width: 90%;
+  width: 7.5rem;
 }
 .goal .eyes .box img {
-  width: 30%;
+  width: 10%;
   height: 82%;
   overflow: hidden;
   display: flex;
@@ -394,7 +442,7 @@ main .grid-container .caja .jpg {
 }
 .goal .eyes .box h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 0.75rem;
 }
 .goal .eyes .box .jpg {
   width: 86%;
@@ -404,6 +452,112 @@ main .grid-container .caja .jpg {
   justify-content: center;
   align-items: center;
   margin-top: 6px;
+}
+.goal .oferta {
+  margin: 1.8rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 1.25rem;
+}
+@media screen and (max-width: 768px) {
+  .goal .oferta {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.goal .oferta .sale {
+  display: flex;
+  justify-items: center;
+}
+.goal .oferta .sale .btnsale {
+  font-size: 16px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+.goal .oferta .sale button:focus,
+.goal .oferta .sale button:hover {
+  color: #fff;
+}
+.goal .oferta .sale button:focus:after,
+.goal .oferta .sale button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.goal .oferta .sale button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+.goal .oferta .box-oferta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+}
+@media screen and (max-width: 456px) {
+  .goal .oferta .box-oferta {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .goal .oferta .box-oferta {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 330px) {
+  .goal .oferta .box-oferta {
+    flex-direction: column;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.goal .oferta .box-oferta .end {
+  display: flex;
+  flex-direction: column;
+  width: 9.6rem;
+  justify-content: center;
+  border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+  .goal .oferta .box-oferta .end {
+    width: 8.75rem;
+  }
+}
+.goal .oferta .box-oferta .end a {
+  text-decoration: none;
+}
+.goal .oferta .box-oferta .end .conteinerimg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
 .soda {
