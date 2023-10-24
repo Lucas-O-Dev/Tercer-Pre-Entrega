@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&display=swap" rel="stylesheet">
+    <script src="../js/index.js"></script>
 </head>
 <body class="try">
 
@@ -54,21 +55,38 @@
                     <img src="../assets/img/wahl-professional-logo-FF1B8F1559-seeklogo.com.png" alt="logo-wahl" class="cobrar">
                     <img src="../assets/img/png-transparent-chanel-logo-brand-fashion-coco-company-text-trademark.png" alt="logo-chanel" class="cobrar">
                     </div>
+
                 <p>Podes pedir de manera on-line el producto que desees y llegará a tu domicilio en pocos días.</p>
+
                 <p>Te mostramos las secciones que tienes para elegir!</p>
+
+            </div>
+
+            <div class="btnjs">
+
+                <!-- boton con la funcion-clientepide -->
+
+                <div class="funcionclientepide">
+                    <button onclick="clientePide()" class="btn-clientepide">Elije un producto aquí.</button>
+                </div>
+
+                <div class="funcionclientepide">
+                    <button onclick="buscarProducto()" class="btn-clientepide">¿Te gustaría buscarlo?</button>
+                </div>
+
             </div>
 
             </div>
 
 
             <div class="eyes">
-    
+
                 <div class="box">
-    
+
                         <img src="../assets/img/labial1.jpg" alt="labial-liquido" class="equis">
-    
+
                         <h3 class="h3c2">Labiales Liquidos</h3>
-    
+
                             <div data-tooltip="Price:-$20" class="button">
                                 <div class="button-wrapper">
                                 <div class="text">Buy Now</div>
@@ -81,13 +99,13 @@
                                 </div>
 
                 </div>
-    
+
                 <div class="box">
-    
+
                     <img src="../assets/img/labial2.jpg" alt="barras-labiales" class="equis">
-    
+
                     <h3 class="h3c2">Barras Labiales</h3>
-    
+
                     <div data-tooltip="Price:-$20" class="button">
                         <div class="button-wrapper">
                         <div class="text">Buy Now</div>
@@ -98,15 +116,15 @@
                             </span>
                         </div>
                         </div>
-    
+
             </div>
-    
+
             <div class="box">
-    
+
                 <img src="../assets/img/12064.jpg" alt="mascaras-cosmeticas" class="equis">
-    
+
                 <h3 class="h3c2">Máscara Para Pestañas</h3>
-    
+
                 <div data-tooltip="Price:-$20" class="button">
                     <div class="button-wrapper">
                     <div class="text">Buy Now</div>
@@ -117,15 +135,15 @@
                         </span>
                     </div>
                     </div>
-    
+
         </div>
-    
+
         <div class="box">
-    
+
             <img src="../assets/img/12267.jpg" alt="esmalte-cosmetico" class="equis">
-    
+
             <h3 class="h3c2">Esmaltes Para Uñas</h3>
-    
+
             <div data-tooltip="Price:-$20" class="button">
                 <div class="button-wrapper">
                 <div class="text">Buy Now</div>
@@ -136,15 +154,15 @@
                     </span>
                 </div>
                 </div>
-    
+
     </div>
-    
+
             <div class="box">
-    
+
             <img src="../assets/img/8179.jpg" alt="quitaesmalte-cosmetico" class="equis">
-    
+
             <h3 class="h3c2">Quitaesmaltes</h3>
-    
+
             <div data-tooltip="Price:-$20" class="button">
                 <div class="button-wrapper">
                 <div class="text">Buy Now</div>
@@ -155,15 +173,15 @@
                     </span>
                 </div>
                 </div>
-    
+
             </div>
-    
+
             <div class="box">
-    
+
                 <img src="../assets/img/6897.jpg" alt="maquillaje-compacto" class="equis">
-    
+
                 <h3 class="h3c2">Maquillaje Compacto</h3>
-    
+
             <div data-tooltip="Price:-$20" class="button">
                 <div class="button-wrapper">
                 <div class="text">Buy Now</div>
@@ -183,16 +201,16 @@
 <div class="oferta">
 
     <div class="sale">
-    
-        <button class="btnsale">
+
+        <button onclick="mostrarProductosConDescuento();" class="btnsale">
             <h2>Ofertas!</h2>
         </button>
     </div>
 
 
     <div class="box-oferta">
-    
-        <button class="end"><a href="#"> 
+
+        <button class="end"><a href="#">
 
             <div class="conteinerimg">
 
@@ -204,7 +222,7 @@
 
         </a></button>
 
-        <button class="end"><a href="#"> 
+        <button class="end"><a href="#">
 
             <div class="conteinerimg">
 
@@ -216,7 +234,7 @@
 
         </a></button>
 
-        <button class="end"><a href="#"> 
+        <button class="end"><a href="#">
 
             <div class="conteinerimg">
 
@@ -232,28 +250,41 @@
 </div>
 </div>
 
+<div class="labelsale">
+
+    <p>¿Te gustaría recibir un correo electrónico con las nuevas ofertas semanales?</p>
+
+    <!-- icono del label -->
+    <div class="imglabelsale">
+        <img src="../assets/img/email.png" alt="icon-email">
+    </div>
+
+    <!-- Campo de entrada (input) -->
+<input type="text" id="inputText" placeholder="Introduce tu e-mail.">
+
+</div>
     </main>
 
         <footer>
 
             <div class="grid-foot">
-    
+
                 <div class="spanes">
                     <span> +54 358-287789</span>
                     <span>rrhhvenecia@gmail.com</span>
                 </div>
-    
+
                     <div class="footer-content-container">
                         <a href="#" class="menu-item-footer">Cookies</a>
                         <a href="#" class="menu-item-footer">Terminos y condiciones</a>
                     </div>
-    
+
                 <div class="copyright-container">
                     <span class="copyright">&copy;2023, lucas.com</span>
                 </div>
-    
+
             </div>
-    
+
         </footer>
 
 </body>
