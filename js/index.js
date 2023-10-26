@@ -83,6 +83,7 @@ class ProductoPeluqueria {
 
 const producto = [
     new ProductoPeluqueria("Barras Labiales", "Labiales", "Velvet"),
+    new ProductoPeluqueria("Labiales Liquidos", "Labiales", "Velvet"),
     new ProductoPeluqueria("Mascara Para Pestañas", "Mascara", "Maybelline"),
     new ProductoPeluqueria("Esmaltes", "Esmaltes", "Vogue"),
     new ProductoPeluqueria("Quita Esmaltes", "Esmaltes", "Vogue"),
@@ -103,4 +104,71 @@ function buscarProducto() {
         console.log("Producto no encontrado");
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.querySelector('.btnsubmit');
+    const input = document.getElementById('inputText');
+
+    btn.addEventListener('click', function() {
+        const dato = input.value;
+
+        if (typeof(Storage) !== "undefined") {
+            // Convertir el dato en JSON
+            const datoJSON = JSON.stringify({dato});
+
+            // Almacenar el dato JSON
+            localStorage.setItem("datoAlmacenado", datoJSON);
+            console.log("Dato almacenado en Local Storage como JSON.");
+
+            // Verificar si el dato se ha guardado correctamente
+            const datoGuardadoJSON = localStorage.getItem("datoAlmacenado");
+            const datoGuardado = JSON.parse(datoGuardadoJSON).dato;
+            if (dato === datoGuardado) {
+                console.log("El dato se ha guardado correctamente en el Local Storage.");
+            } else {
+                console.log("Ha ocurrido un error al guardar el dato en el Local Storage.");
+            }
+        } else {
+            console.log("Lo siento, tu navegador no soporta almacenamiento local.");
+        }
+    });
+}); 
+
+//declaracion del dom card-container
+document.addEventListener("DOMContentLoaded", function() {
+
+    //llamamos a : 
+    const cardContainer = document.getElementById('card-container');
+
+    //creamos los elementos de la card
+    const card = document.createElement('div');
+    const heading = document.createElement('h2');
+    const paragraph = document.createElement('p');
+    const image = document.createElement('img');
+
+    //le decimos el contenido:
+    heading.textContent = 'CoderHouseDOM';
+    paragraph.textContent = 'Card probando DOM. Falta pulir. ';
+    image.src = '../assets/img/dinero.png'; 
+    image.alt = 'dinero-imagen';
+
+    // Establecer el ancho y el alto de la imagen
+    image.style.width = '100px';
+    image.style.height = '100px';
+
+    //las clases de card-container
+    card.classList.add('card');
+    heading.classList.add('card-title');
+    paragraph.classList.add('card-text');
+
+    //El método appendChild() inserta un nuevo nodo dentro de la estructura DOM de un documento
+
+    card.appendChild(heading);
+    card.appendChild(paragraph);
+    card.appendChild(image);
+    cardContainer.appendChild(card);
+});
+
+
+
 
