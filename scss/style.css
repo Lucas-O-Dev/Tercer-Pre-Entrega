@@ -672,6 +672,13 @@ main .grid-container .caja .jpg {
   padding-top: 0.5rem;
   align-items: center;
 }
+.soda .adb {
+  border: 4px solid red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
 @media screen and (max-width: 768px) {
   .soda {
     display: flex;
@@ -908,6 +915,97 @@ main .grid-container .caja .jpg {
   display: flex;
   flex-direction: column;
 }
+.zeballos .popup {
+  margin-top: 12.5rem;
+  margin-bottom: 6.25rem;
+}
+.zeballos h1 {
+  margin: 0;
+  color: black;
+}
+.zeballos #contact {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  margin: 4em auto;
+  width: 6.25rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center; /* Asegúrate de usar 'justify-content' en lugar de 'justify-items' para centrar horizontalmente el contenido */
+  align-items: center; /* Agrega 'align-items' para centrar verticalmente si es necesario */
+}
+.zeballos #contact span {
+  text-align: center; /* Aplica text-align directamente al elemento de texto */
+}
+.zeballos #contact:hover {
+  background: #666;
+}
+.zeballos #contact:active {
+  background: #444;
+}
+.zeballos #contactForm {
+  display: none;
+  border-radius: 0.5rem;
+  border: 0.125rem solid white;
+  padding: 2em;
+  width: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.zeballos input, .zeballos textarea {
+  margin: 0.8em auto;
+  font-family: inherit;
+  text-transform: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  display: block;
+  width: 280px;
+  padding: 0.4em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+.zeballos textarea {
+  height: 80px;
+  resize: none;
+}
+.zeballos .formBtn {
+  border-radius: 0.5rem;
+  width: 140px;
+  padding: 2px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: black;
+  font-weight: 100;
+  font-size: 0.875rem;
+  border: none;
+  text-align: center; /* Centra el texto horizontalmente */
+  line-height: 30px; /* Alinea verticalmente el texto en el centro */
+}
+.zeballos .hell {
+  margin-top: 1rem;
+  padding: 1.125rem;
+  display: flex;
+  flex-direction: column;
+}
 .zeballos .hell .taza {
   display: flex;
   margin-left: 0.5rem;
@@ -926,132 +1024,146 @@ main .grid-container .caja .jpg {
   align-items: center;
   color: white;
 }
-.zeballos .hell .ring .formulario {
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.5rem;
-}
-@media screen and (max-width: 330px) {
-  .zeballos .hell .ring .formulario {
-    background: none;
-  }
-}
-.zeballos .hell .ring .formulario input {
-  background: rgba(250, 250, 250, 0.2);
-  width: 17.5rem;
-  height: 2.5rem;
-  border-radius: 0.3125rem;
-  border-style: solid;
-  border-width: 0.0625rem;
-  border-color: #e4c1f9;
-  margin-top: 0.625rem;
-  padding-left: 0.625rem;
-  margin-bottom: 1.25rem;
-}
-.zeballos .hell .ring .formulario textarea {
-  background: rgba(250, 250, 250, 0.2);
-  width: 17.5rem;
-  height: 9.375rem;
-  border-radius: 0.3125rem;
-  border-style: solid;
-  border-width: 0.0625rem;
-  border-color: #e4c1f9;
-  margin-top: 0.625rem;
-  padding-left: 0.625rem;
-  margin-bottom: 1.25rem;
-  padding-top: 0.9375rem;
-}
-.zeballos .hell .ring .formulario label {
-  display: block;
-  float: center;
-}
-.zeballos .hell .ring .formulario button {
-  height: 2.8125rem;
-  padding-left: 0.3125rem;
-  padding-right: 0.3125rem;
-  margin-bottom: 1.25rem;
-  margin-top: 0.625rem;
-  text-transform: uppercase;
-  background: rgba(250, 250, 250, 0.2);
-  border-color: #e4c1f9;
-  border-style: solid;
-  border-radius: 0.625rem;
-  width: 17.5rem;
-  cursor: pointer;
-}
-.zeballos .hell .ring .formulario button p {
-  color: #fff;
-}
-.zeballos .hell .ring .formulario span {
-  color: #ab4493;
-}
-.zeballos .hell .ring .formulario .aviso {
-  font-size: 0.8125rem;
-  color: #0e0e0e;
-}
-.zeballos .hell .ring .formulario h1 {
-  font-size: 2.4375rem;
-  text-align: left;
-  padding-bottom: 1.25rem;
-  color: white;
-}
-.zeballos .hell .ring .formulario h3 {
-  font-size: 0.875rem;
-  padding-bottom: 1.875rem;
-  display: flex;
-  margin-left: 0.625rem;
-  align-items: center;
-  color: white;
-}
-.zeballos .hell .ring .formulario p {
-  font-size: 0.875rem;
-  color: white;
-}
-.zeballos .hell .ring .formulario ::-webkit-input-placeholder {
-  color: #a8a8a8;
-}
-.zeballos .hell .ring .formulario ::-webkit-textarea-placeholder {
-  color: #a8a8a8;
-}
-.zeballos .hell .ring .formulario .formulario input:focus {
-  outline: 0;
-  border: 0.0625rem solid #97d848;
-}
-.zeballos .hell .ring .formulario .formulario textarea:focus {
-  outline: 0;
-  border: 0.0625rem solid #97d848;
-}
-.zeballos .hell .archivo {
+.zeballos .archivo {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0.625rem;
 }
-.zeballos .hell .walk {
+.zeballos .walk {
   width: 90%;
   margin-bottom: 3.75rem;
 }
-.zeballos .hell .walk ul {
+.zeballos .walk ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   list-style: none;
 }
-.zeballos .hell .contenido, .zeballos .hell .contenido .sleep {
+.zeballos .contenido, .zeballos .contenido .sleep {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.zeballos .hell .contenido .sleep {
+.zeballos .contenido .sleep {
   width: 1.875rem;
   height: 1.875rem;
   margin: 0.375rem;
+}
+
+.bodyturno {
+  background: black;
+  display: flex;
+  flex-direction: column;
+}
+.bodyturno .conteinerimgturno {
+  height: 31.25rem;
+  margin-bottom: 0.875rem;
+  background-image: url("../assets/img/fondooooo.png");
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position: center; /* Alinea la imagen al centro */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
+.bodyturno .reservaTurno {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.bodyturno .reservaTurno h1 {
+  margin: 0;
+}
+.bodyturno .reservaTurno #contact {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  margin: 4em auto;
+  width: 6.25rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center; /* Asegúrate de usar 'justify-content' en lugar de 'justify-items' para centrar horizontalmente el contenido */
+  align-items: center; /* Agrega 'align-items' para centrar verticalmente si es necesario */
+}
+.bodyturno .reservaTurno #contact:hover {
+  background: #666;
+}
+.bodyturno .reservaTurno #contact:active {
+  background: #444;
+}
+.bodyturno .reservaTurno #contactForm {
+  display: none;
+  border-radius: 0.5rem;
+  border: 0.125rem solid white;
+  padding: 0.5rem;
+  width: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.bodyturno .reservaTurno input, .bodyturno .reservaTurno textarea {
+  margin: 0.8em auto;
+  font-family: inherit;
+  text-transform: inherit;
+  font-size: inherit;
+  display: block;
+  width: 280px;
+  padding: 0.4em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+.bodyturno .reservaTurno textarea {
+  height: 80px;
+  resize: none;
+}
+.bodyturno .reservaTurno .formBtn {
+  border-radius: 0.5rem;
+  width: 140px;
+  padding: 2px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: black;
+  font-weight: 100;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: 1px solid white;
+  text-align: center; /* Centra el texto horizontalmente */
+  line-height: 30px; /* Alinea verticalmente el texto en el centro */
+}
+.bodyturno .reservaTurno .conteinerform {
+  height: 31.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bodyturno .reservaTurno .conteinerform .infoturnos {
+  border: 1px solid rgb(132, 0, 255);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  padding: 0.375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }/*# sourceMappingURL=style.css.map */
