@@ -1,0 +1,8 @@
+    {
+        "productos": [
+        { "nombre": "Champú", "precio": 10.99, "categoria": "Cuidado del cabello" },
+        { "nombre": "Acondicionador", "precio": 8.99, "categoria": "Cuidado del cabello" },
+        { "nombre": "Gel fijador", "precio": 5.49, "categoria": "Styling" },
+        { "nombre": "Tinte para el cabello", "precio": 12.99, "categoria": "Coloración" }
+        ]
+    }

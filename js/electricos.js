@@ -1,4 +1,3 @@
-// Array de objetos de productos de peluquería
 const productosPeluqueria = [
     { id: 1, nombre: 'Cortadoradepelobabyliss', precio: 12000 },
     { id: 2, nombre: 'Secadordepelowahl', precio: 10200 },
@@ -6,8 +5,27 @@ const productosPeluqueria = [
     { id: 4, nombre: 'Cortadoradepelowahl', precio: 13100 }
 ];
 
-// Función asincrónica que obtiene los productos de peluquería
-const obtenerProductosPeluqueria = () => {
+const verProductosButton = document.getElementById('verProductosButton');
+const popupPeluqueria = document.getElementById('popup');
+const productosListPeluqueria = document.getElementById('productosList');
+
+verProductosButton.addEventListener('click', async () => {
+    try {
+        const productos = await obtenerProductosPeluqueria();
+        const listItems = productos.map(producto => {
+            const item = document.createElement('li');
+            item.textContent = `ID: ${producto.id}, Nombre: ${producto.nombre}, Precio: ${producto.precio}`;
+            return item;
+        });
+        productosListPeluqueria.innerHTML = '';
+        listItems.forEach(item => productosListPeluqueria.appendChild(item));
+        popupPeluqueria.style.display = 'block';
+    } catch (error) {
+        console.error(`Error: ${error}`);
+    }
+});
+
+function obtenerProductosPeluqueria() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (productosPeluqueria.length > 0) {
@@ -17,17 +35,26 @@ const obtenerProductosPeluqueria = () => {
             }
         }, 2000); // Simulamos un retardo de 2 segundos
     });
-};
+}
 
-// Utilizar la función asincrónica para obtener los productos de peluquería
-(async () => {
+const verJsonButton = document.getElementById('verJson');
+const popupJson = document.getElementById('popupJson');
+const productosListJson = document.getElementById('productosJson');
+
+verJsonButton.addEventListener('click', async () => {
     try {
-        const productos = await obtenerProductosPeluqueria();
-        console.log('Productos de peluquería disponibles:');
-        productos.forEach(({ id, nombre, precio }) => {
-            console.log(`ID: ${id}, Nombre: ${nombre}, Precio: ${precio}`);
+        const response = await fetch('../productosofertas.json');
+        const data = await response.json();
+        const productos = data.productos;
+        const listItems = productos.map(producto => {
+            const item = document.createElement('li');
+            item.textContent = `Nombre: ${producto.nombre}, Precio: $${producto.precio}, Categoría: ${producto.categoria}`;
+            return item;
         });
+        productosListJson.innerHTML = '';
+        listItems.forEach(item => productosListJson.appendChild(item));
+        popupJson.style.display = 'block';
     } catch (error) {
-        console.error(`Error: ${error}`);
+        console.error(`Error al cargar el archivo JSON: ${error}`);
     }
-})();
+});

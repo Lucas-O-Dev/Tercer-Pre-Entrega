@@ -99,12 +99,21 @@
                         </div>
 
                         <div class="adb">
-                            <h2>"Base de datos"</h2>
-                            <p>Productos eléctricos que van a ingresar al stock: </p>
-                            <div class="stocknuevo">
-                                <p>hola</p>
+                            <button id="verProductosButton">Ver productos disponibles.</button>
+                            <div id="popup" style="display: none;">
+                                <h2>Productos de peluquería disponibles:</h2>
+                                <ul id="productosList"></ul>
                             </div>
                         </div>
+
+                        <div class="adb">
+                            <button id="verJson">Aquí puedes ver el pedido en camino!</button>
+                            <div id="popupJson" style="display: none;">
+                                <h2>Nuevos productos en camino!</h2>
+                                <ul id="productosJson"></ul>
+                            </div>
+                        </div>
+
         </main>
 
         <footer>
