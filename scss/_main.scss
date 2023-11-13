@@ -5,7 +5,19 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     @include reset;
+    .btn{
+        border: 4px solid red;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        padding: 1.25rem;
+        margin-top: 1.875rem;
+
+    }
     .sells{
         width: 100%;
         height: 24rem;
@@ -26,7 +38,7 @@ main{
             transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
             transition-duration: 400ms;
             transition-property: color;
-          }
+            }
         
             button:focus,
             button:hover {
@@ -84,56 +96,6 @@ main{
             height: 3.125rem;
         }
     }
-    .grid-container{
-        display: grid;
-        gap: 0.625rem;
-        grid-template-columns: repeat(auto-fit, minmax(216px, 1.4fr));
-        margin-top: 3.6rem;
-        .caja{
-            background-color: white;
-            border-radius: 8px;
-            color: black;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: $fontsize;
-            margin: 10px;
-            button{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                width: 100%;
-                a{
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-decoration: none
-                    
-                }
-            }
-            img{
-                @include img;
-                border-radius: 12px;
-                
-            }
-            h3{
-                margin: 0;
-            }
-            p{
-                margin-bottom: 4px;
-                margin-top: 0;
-            }
-            .jpg{
-                @include jpg;
-            }
-            }
-        }
     }
 
     .goal{
@@ -290,121 +252,6 @@ main{
                 @include mediagridmobile{
                     width: 60%; /* Ajusta el ancho de las cajas */
                 }
-                    .button {
-                        font-size: $fontsize;
-                        --width: 100px;
-                        --height: 35px;
-                        --tooltip-height: 35px;
-                        --tooltip-width: 90px;
-                        --gap-between-tooltip-to-button: 18px;
-                        --button-color: #222;
-                        --tooltip-color: #fff;
-                        width: var(--width);
-                        height: var(--height);
-                        background: var(--button-color);
-                        position: relative;
-                        text-align: center;
-                        border-radius: 0.45em;
-                        font-family: "Arial";
-                        transition: background 0.3s;
-                        margin: 4px;
-                    }
-                    
-                    .button::before {
-                        position: absolute;
-                        content: attr(data-tooltip);
-                        width: var(--tooltip-width);
-                        height: var(--tooltip-height);
-                        background-color: #555;
-                        font-size: 0.9rem;
-                        color: #fff;
-                        border-radius: .25em;
-                        line-height: var(--tooltip-height);
-                        bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-                        left: calc(50% - var(--tooltip-width) / 2);
-                    }
-                    
-                    .button::after {
-                        position: absolute;
-                        content: '';
-                        width: 0;
-                        height: 0;
-                        border: 10px solid transparent;
-                        border-top-color: #555;
-                        left: calc(50% - 10px);
-                        bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-                    }
-                    
-                    .button::after,.button::before {
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: all 0.5s;
-                    }
-                    
-                    .text {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-                    
-                    .button-wrapper,.text,.icon {
-                        overflow: hidden;
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        left: 0;
-                        color: #fff;
-                    }
-                    
-                    .text {
-                        top: 0
-                    }
-                    
-                    .text,.icon {
-                        transition: top 0.5s;
-                    }
-                    
-                    .icon {
-                        color: #fff;
-                        top: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-                    
-                    .icon svg {
-                        width: 24px;
-                        height: 24px;
-                    }
-                    
-                    .button:hover {
-                        background: #222;
-                    }
-                    
-                    .button:hover .text {
-                        top: -100%;
-                    }
-                    
-                    .button:hover .icon {
-                        top: 0;
-                    }
-                    
-                    .button:hover:before,.button:hover:after {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                    
-                    .button:hover:after {
-                        bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
-                    }
-                    
-                    .button:hover:before {
-                        bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
-                    }
-                    
-                    
-                    
-                    
                 .equis{
                     width: 7.5rem;
                 }
@@ -1014,6 +861,85 @@ textarea { height: 80px; resize: none; }
         }
         }
 
+        .labialesStore{
+            border: 4px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            .verCarrito {
+                border: 4px solid green;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: 1.5rem;
+                padding: 1.125rem;
+                .carritoContainer {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1.125rem;
+                    flex-wrap: wrap;
+                }
+            }
+            
+            .title{
+                border: 4px solid yellow;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 1.5rem;
+            }
+            .conteinerlabiales {
+                border: 4px solid blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+            
+                .card-container {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                }
+            
+                .card {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 16px;
+                    text-align: center;
+                    width: 8.75rem;
+                    margin: 1.25rem;
+            
+                    img {
+                        width: 100%;
+                        height: 9.375rem; // Establece la altura deseada
+                        object-fit: cover; // Ajusta la imagen al tamaño del contenedor sin distorsionarse
+                        border-radius: 8px; // Añade bordes redondeados si es necesario
+                    }
+            
+                    &Button {
+                        margin-top: 10px;
+                    }
+                }
+            
+                .cart-container {
+                    margin-top: 20px;
+                    padding: 16px;
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+            
+                    h2 {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            
+        }
 
 
 

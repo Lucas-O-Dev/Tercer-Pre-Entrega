@@ -1,7 +1,8 @@
 body{
     @include reset;
     background: url(../assets/img/fondooooo.png) no-repeat center center fixed;
-    background-size:cover;
+    // background-size:cover;
+    
     color: $fontcolor;
     font-size: 16px;
     font-family: 'Bricolage Grotesque', sans-serif;

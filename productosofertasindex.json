@@ -1,0 +1,17 @@
+    [
+        {
+        "nombre": "Champú Hidratante",
+        "descripcion": "Champú para hidratar y suavizar el cabello.",
+        "precio": 10.99
+        },
+        {
+        "nombre": "Acondicionador Reparador",
+        "descripcion": "Acondicionador para reparar y fortalecer el cabello dañado.",
+        "precio": 12.99
+        },
+        {
+        "nombre": "Gel Fijador",
+        "descripcion": "Gel para estilizar y fijar peinados.",
+        "precio": 8.49
+        }
+    ]

@@ -16,7 +16,7 @@ const buscarProducto = () => {
 
     if (productoEncontrado) {
         const mensajeEncontrado = document.createElement('p');
-        mensajeEncontrado.textContent = 'La categoría se encuentra en disponible.';
+        mensajeEncontrado.textContent = 'La categoría se encuentra disponible.';
         resultadoDiv.innerHTML = '';
         resultadoDiv.appendChild(mensajeEncontrado);
     } else {
@@ -27,7 +27,7 @@ const buscarProducto = () => {
     }
 };
 
-// Datos de ejemplo para las tarjetas
+// Datos para las tarjetas
 const data = [
     {
         imgSrc: '/assets/img/kisspng-maybelline-volum-express-mascara-eyelash-cosmetic-maybelline-5b8738420462d2.408553081535588418018.png',
@@ -47,7 +47,6 @@ const data = [
         title: 'Rimel Maybelline Pink',
         price: '110$'
     },
-    // Añade más objetos de datos para cada tarjeta adicional que quieras crear
 ];
 
 // Obtener el contenedor

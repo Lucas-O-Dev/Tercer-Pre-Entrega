@@ -47,7 +47,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: url(../assets/img/fondooooo.png) no-repeat center center fixed;
-  background-size: cover;
   color: white;
   font-size: 16px;
   font-family: "Bricolage Grotesque", sans-serif;
@@ -83,9 +82,20 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+main .btn {
+  border: 4px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 1.25rem;
+  margin-top: 1.875rem;
 }
 main .sells {
   width: 100%;
@@ -164,66 +174,6 @@ main .scuby .shaggy .sid {
 main .scuby img {
   width: 3.125rem;
   height: 3.125rem;
-}
-main .grid-container {
-  display: grid;
-  gap: 0.625rem;
-  grid-template-columns: repeat(auto-fit, minmax(216px, 1.4fr));
-  margin-top: 3.6rem;
-}
-main .grid-container .caja {
-  background-color: white;
-  border-radius: 8px;
-  color: black;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  margin: 10px;
-}
-main .grid-container .caja button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-main .grid-container .caja button a {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-main .grid-container .caja img {
-  width: 10%;
-  height: 82%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6px;
-  border-radius: 12px;
-}
-main .grid-container .caja h3 {
-  margin: 0;
-}
-main .grid-container .caja p {
-  margin-bottom: 4px;
-  margin-top: 0;
-}
-main .grid-container .caja .jpg {
-  width: 86%;
-  height: 86%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6px;
 }
 
 .goal {
@@ -394,107 +344,11 @@ main .grid-container .caja .jpg {
     width: 60%; /* Ajusta el ancho de las cajas */
   }
 }
-.eyes .box .button {
-  font-size: 16px;
-  --width: 100px;
-  --height: 35px;
-  --tooltip-height: 35px;
-  --tooltip-width: 90px;
-  --gap-between-tooltip-to-button: 18px;
-  --button-color: #222;
-  --tooltip-color: #fff;
-  width: var(--width);
-  height: var(--height);
-  background: var(--button-color);
-  position: relative;
-  text-align: center;
-  border-radius: 0.45em;
-  font-family: "Arial";
-  transition: background 0.3s;
-  margin: 4px;
-}
-.eyes .box .button::before {
-  position: absolute;
-  content: attr(data-tooltip);
-  width: var(--tooltip-width);
-  height: var(--tooltip-height);
-  background-color: #555;
-  font-size: 0.9rem;
-  color: #fff;
-  border-radius: 0.25em;
-  line-height: var(--tooltip-height);
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-  left: calc(50% - var(--tooltip-width) / 2);
-}
-.eyes .box .button::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-top-color: #555;
-  left: calc(50% - 10px);
-  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-}
-.eyes .box .button::after, .eyes .box .button::before {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s;
-}
-.eyes .box .text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.eyes .box .button-wrapper, .eyes .box .text, .eyes .box .icon {
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  color: #fff;
-}
-.eyes .box .text {
-  top: 0;
-}
-.eyes .box .text, .eyes .box .icon {
-  transition: top 0.5s;
-}
-.eyes .box .icon {
-  color: #fff;
-  top: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.eyes .box .icon svg {
-  width: 24px;
-  height: 24px;
-}
-.eyes .box .button:hover {
-  background: #222;
-}
-.eyes .box .button:hover .text {
-  top: -100%;
-}
-.eyes .box .button:hover .icon {
-  top: 0;
-}
-.eyes .box .button:hover:before, .eyes .box .button:hover:after {
-  opacity: 1;
-  visibility: visible;
-}
-.eyes .box .button:hover:after {
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
-}
-.eyes .box .button:hover:before {
-  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
-}
 .eyes .box .equis {
   width: 7.5rem;
 }
 .eyes .box img {
-  width: 10%;
+  width: 50%;
   height: 82%;
   overflow: hidden;
   display: flex;
@@ -1163,4 +1017,77 @@ main .grid-container .caja .jpg {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.labialesStore {
+  border: 4px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+.labialesStore .verCarrito {
+  border: 4px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  padding: 1.125rem;
+}
+.labialesStore .verCarrito .carritoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.125rem;
+  flex-wrap: wrap;
+}
+.labialesStore .title {
+  border: 4px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+.labialesStore .conteinerlabiales {
+  border: 4px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.labialesStore .conteinerlabiales .card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.labialesStore .conteinerlabiales .card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 8.75rem;
+  margin: 1.25rem;
+}
+.labialesStore .conteinerlabiales .card img {
+  width: 100%;
+  height: 9.375rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.labialesStore .conteinerlabiales .cardButton {
+  margin-top: 10px;
+}
+.labialesStore .conteinerlabiales .cart-container {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.labialesStore .conteinerlabiales .cart-container h2 {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
